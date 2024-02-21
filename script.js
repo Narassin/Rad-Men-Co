@@ -98,7 +98,7 @@ $(document).ready(function () {
             fieldsHtml += '<input type="text" id="link_' + i + '" name="link_' + i + '" placeholder="Enter link URL">';
 
             fieldsHtml += '<label for="title_' + i + '">Title ' + j + ':</label>';
-            fieldsHtml += '<input type="text" id="title_' + i + '" name="title_' + i + '" placeholder="Enter link title">';
+            fieldsHtml += '<input type="text" id="title_' + i + '" name="title_' + i + '" placeholder="Enter link Title">';
        
             fieldsHtml += '<label for="details_' + i + '">Details ' + j + ':</label>';
             fieldsHtml += '<input type="text" id="details_' + i + '" name="details_' + i + '" placeholder="Enter link Details">';

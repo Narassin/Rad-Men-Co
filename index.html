@@ -7,27 +7,56 @@
     <title>SVG Donut Generator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
 </head>
 
 <body>
     <div class="py-5 container">
       <h1 class="text-white heading-1">Narassin SVG Donut Generator</h1>
-        <div class="row align-items-md-stretch">
-            <div class="col-md-8">
-              <div class="h-100 p-5 text-bg-dark rounded-3">
-                <form id="svgForm">
+        <div class="row" style="height: 75vh;">
+            <div class="col-md-8" >
+              <div class="h-100 mb-auto p-5 text-bg-dark rounded-3">
+                <!-- first Form -->
+                <form class="h-100" id="svgFormA">
+                  
                   <!-- form group -->
-                    <label for="sections">Number of Sections:</label>
-                    <input type="number" id="sections" name="sections" min="1" required>
-                    <label for="size">Size of Circle (Radius):</label>
-                    <input type="number" id="size" name="size" min="10" required>
-                    <label for="thicc">Thickness of Donut:</label>
-                    <input type="number" id="thick" name="thicc" min="10" required>
-                    <label for="offset">Offset:</label>
-                    <input type="number" id="offset" name="offset" min="1" required>
-                    
+                  <div class="row">
+                    <div class="col">
+                      <div class="d-flex flex-wrap">
+                        <label class="my-2 me-2" for="sections">Number of Sections:</label>
+                        <input class="my-2 me-2" type="number" id="sections" name="sections" min="1" required>
+                      </div>
+                      <div class="d-flex flex-wrap">
+                        <label class="my-2 me-2" for="size">Size of Circle (Radius):</label>
+                        <input class="my-2 me-2" type="number" id="size" name="size" min="10" required>
+                      </div>
+                      <div class="d-flex flex-wrap">
+                        <label class="my-2 me-2" for="thick">Thickness of Donut:</label>
+                        <input class="my-2 me-2" type="number" id="thick" name="thick" min="10" required>
+                      </div>
+                    </div>  
+                    <div class="col">
+                      <div class="d-flex flex-wrap">
+                        <label class="my-2 me-2" for="offset">Offset:</label>
+                        <input class="my-2 me-2" type="number" id="offset" name="offset" min="1" required>  
+                      </div>
+                      <div class="d-flex flex-wrap">
+                        <label class="my-2 me-2" for="strokeW">Stroke Width: </label>
+                        <input class="my-2 me-2" type="number" id="strokeW" name="strokeW" min="0" required><br>  
+                      </div>
+                      <div class="d-flex flex-wrap">
+                        <label class="my-2 me-2" for="color">Color:</label>
+                        <input class="my-2 me-2" type="color" id="color" name="color" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row py-3" id="additionalFields"></div>
+                  <div class="row">
                     <button type="submit">Generate SVG</button>
-                </form> 
+                  </div>
+                </form>
+
               </div>
             </div>
             <div class="col-md-4">
